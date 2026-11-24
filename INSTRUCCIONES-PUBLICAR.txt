@@ -1,0 +1,15 @@
+PORTFOLIO CB GRAPHIC DESIGN - LISTO PARA PUBLICAR
+
+Este ZIP contiene index.html, los archivos /assets y enlaces de respaldo a los cinco proyectos.
+
+1. Entrá a https://vercel.com/drop o https://app.netlify.com/drop/
+2. Subí el ZIP directamente.
+3. Registrate/iniciá sesión para conservar la publicación.
+4. Tu plataforma te asignará un enlace temporal (por ejemplo, *.vercel.app).
+5. Para dominio propio registrá un dominio que controles (por ejemplo, cbgraphicdesign.com, sujeto a disponibilidad). En el panel del hosting elegí Domains / Add Domain y seguí las indicaciones DNS.
+
+IMPORTANTE: www.cb.graphicdesign.com NO es un dominio registrable independiente; depende de ser propietario de graphicdesign.com.
+
+El HTML original se conserva visualmente; para que la web cargue más ágil, las imágenes PNG pesadas se han convertido a WebP de alta calidad. Los videos y las demás imágenes se mantienen en su formato original.
+
+Este ZIP no está publicado automáticamente.
