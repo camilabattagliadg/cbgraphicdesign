@@ -2354,6 +2354,94 @@ body.dark.pw-project #view-pw .pw-web-player {
   color: #000000 !important;
 }
 </style>
+<style id="uniform-case-study-openings">
+/* VFINAL: a single opening rhythm for all 5 portfolio case studies.
+   Header bottom line → same gap → [number / discipline] → same divider
+   → same gap before the project cover/content. Preserve project palettes. */
+#view-j2 .j2-v43-opening,
+#view-pw .pw-opening,
+#view-ba .ba-hero,
+#view-sens .sens-hero,
+#view-book .book-hero {
+  padding-top: clamp(24px, 2.75vw, 42px) !important;
+}
+
+#view-j2 .j2-system-meta,
+#view-pw .pw-opening-index,
+#view-ba .ba-meta,
+#view-sens .sens-meta,
+#view-book .book-meta {
+  box-sizing: border-box !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  flex-wrap: nowrap !important;
+  gap: 18px !important;
+  width: 91vw !important;
+  max-width: none !important;
+  height: 34px !important;
+  min-height: 34px !important;
+  position: relative !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  padding: 0 0 14px !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--rule) !important;
+  font: 400 11px/1.5 'Courier New', monospace !important;
+  letter-spacing: .075em !important;
+  text-transform: uppercase !important;
+}
+#view-j2 .j2-system-meta > span:first-child,
+#view-pw .pw-opening-index > span:first-child,
+#view-ba .ba-meta > span:first-child,
+#view-sens .sens-meta > span:first-child,
+#view-book .book-meta > span:first-child {
+  display: block !important;
+  flex: 0 0 auto !important;
+  white-space: nowrap !important;
+}
+#view-j2 .j2-system-meta > span:last-child,
+#view-pw .pw-opening-index > span:last-child,
+#view-ba .ba-meta > span:last-child,
+#view-sens .sens-meta > span:last-child,
+#view-book .book-meta > span:last-child {
+  display: block !important;
+  min-width: 0 !important;
+  text-align: right !important;
+  white-space: normal !important;
+}
+
+/* Cover spacing is also identical across the five openings. */
+#view-j2 .j2-v43-opening-grid,
+#view-pw .pw-opening-grid,
+#view-ba .ba-hero-layout,
+#view-sens .sens-intro-grid,
+#view-book .book-hero-grid {
+  margin-top: 38px !important;
+  padding-top: 0 !important;
+}
+@media (max-width: 650px) {
+  #view-j2 .j2-system-meta,
+  #view-pw .pw-opening-index,
+  #view-ba .ba-meta,
+  #view-sens .sens-meta,
+  #view-book .book-meta {
+    font-size: 9px !important;
+    height: 54px !important;
+    min-height: 54px !important;
+    gap: 14px !important;
+  }
+  #view-j2 .j2-v43-opening-grid,
+  #view-pw .pw-opening-grid,
+  #view-ba .ba-hero-layout,
+  #view-sens .sens-intro-grid,
+  #view-book .book-hero-grid {
+    margin-top: 28px !important;
+    padding-top: 0 !important;
+  }
+}
+</style>
 </head><body class="home-page">
 <div id="view-home">
 <header class="topnav studio-topnav">
