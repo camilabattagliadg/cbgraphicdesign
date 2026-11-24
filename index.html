@@ -272,7 +272,7 @@
 .pw-slide-nav:hover{transform:translateY(-50%) scale(1.05);background:#f6f0ea!important}.pw-prev{left:12px}.pw-next{right:12px}
 .pw-slide-count{position:absolute;top:14px;right:14px;background:rgba(0,102,51,0.71);color:#f6f0ea;padding:7px 10px;z-index:2}
 .pw-insta-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 16px 8px}.pw-insta-bottom>span{font-size:24px;letter-spacing:3px}
-#pw-autoplay{background:none;border:1px solid #cbbba5;padding:8px 10px;font:10px 'Courier New',monospace!important;letter-spacing:.04em;color:#006633}
+
 .pw-insta-dots{display:flex;justify-content:center;align-items:center;gap:6px;padding:0 14px 5px;flex-wrap:wrap}
 .pw-insta-dots button{width:6px;height:6px;border:0;background:#cbbba5;border-radius:50%;padding:0;transition:background .2s,transform .2s}.pw-insta-dots button.current{background:var(--pw-green);transform:scale(1.5)}
 .pw-insta-caption{font-size:12px;padding:1px 16px 17px;line-height:1.55;margin:0}
@@ -2251,7 +2251,108 @@ body.dark #view-home .studio-hero-top .studio-hero-side{color:#ada5a1!important}
 #view-j2 .j2-v43-site-pair{align-items:stretch}
 #view-j2 .j2-v43-site-pair figure{aspect-ratio:1672/941;min-width:0;overflow:hidden}
 #view-j2 .j2-v43-site-pair img{display:block;width:100%;height:100%;object-fit:cover}
-</style></head><body class="home-page">
+</style>
+<style id="cb-project-header-alignment-fix-v1">
+/* Keep all five case-study mastheads aligned with Work and protect their intro meta rows. */
+#view-j2 > main,#view-pw > main,#view-ba > main,#view-book > main,#view-sens > main{
+  padding-top:112px!important;
+}
+/* The archive case uses a dark-specific palette for its content, not for its light masthead. */
+#view-sens > .topnav.studio-topnav .studio-mark,
+#view-sens > .topnav.studio-topnav .studio-links a:not(.is-active),
+#view-sens > .topnav.studio-topnav .navtools button,
+#view-sens > .topnav.studio-topnav .navtools .tiny-divider{
+  color:var(--ink)!important;
+}
+#view-sens > .topnav.studio-topnav .studio-mark span,
+#view-sens > .topnav.studio-topnav .studio-links a.is-active{
+  color:#d78faf!important;
+}
+#view-sens > .topnav.studio-topnav .navtools .theme-switch{
+  border-color:var(--rule)!important;
+}
+@media(max-width:950px){
+  #view-j2 > main,#view-pw > main,#view-ba > main,#view-book > main,#view-sens > main{
+    padding-top:92px!important;
+  }
+}
+@media(max-width:650px){
+  #view-j2 > main,#view-pw > main,#view-ba > main,#view-book > main,#view-sens > main{
+    padding-top:126px!important;
+  }
+}
+</style>
+
+<style id="cb-theme-synchronization-and-portal-black-v2">
+/* Theme switches instantly, together with the content, on every page. */
+body,
+#view-home > .topnav.studio-topnav,
+#view-j2 > .topnav.studio-topnav,
+#view-pw > .topnav.studio-topnav,
+#view-ba > .topnav.studio-topnav,
+#view-book > .topnav.studio-topnav,
+#view-sens > .topnav.studio-topnav {
+  transition: none !important;
+}
+
+/* Only Portal Witcomb has a fully black dark-mode canvas. Its imagery,
+   green brand artwork and intentionally cream mockups are left intact. */
+body.dark.pw-project {
+  --paper: #000000 !important;
+  --ink: #f5f2f0 !important;
+  --muted: #bcb6b1 !important;
+  --rule: #494543 !important;
+  background: #000000 !important;
+  color: var(--ink) !important;
+}
+body.dark.pw-project #view-pw,
+body.dark.pw-project #view-pw > .topnav.studio-topnav,
+body.dark.pw-project #view-pw > .pw-case,
+body.dark.pw-project #view-pw .pw-opening,
+body.dark.pw-project #view-pw .pw-intro,
+body.dark.pw-project #view-pw .pw-guides,
+body.dark.pw-project #view-pw .pw-spaces,
+body.dark.pw-project #view-pw .pw-social,
+body.dark.pw-project #view-pw .pw-web,
+body.dark.pw-project #view-pw .pw-reality,
+body.dark.pw-project #view-pw .pw-plans {
+  background: #000000 !important;
+  color: var(--ink) !important;
+}
+/* Portal's cover and closing call-to-action keep their own green branding. */
+body.dark.pw-project #view-pw .pw-intro .pw-mini-meta strong {
+  color: var(--ink) !important;
+}
+body.dark.pw-project #view-pw .pw-intro-content > p,
+body.dark.pw-project #view-pw .pw-guide-head p,
+body.dark.pw-project #view-pw .pw-real-title p,
+body.dark.pw-project #view-pw .pw-spaces-head p,
+body.dark.pw-project #view-pw .pw-social-header p,
+body.dark.pw-project #view-pw .pw-web-title p,
+body.dark.pw-project #view-pw .pw-plan-head p,
+body.dark.pw-project #view-pw .pw-credit,
+body.dark.pw-project #view-pw .pw-case figcaption {
+  color: var(--muted) !important;
+}
+body.dark.pw-project #view-pw .pw-section-top,
+body.dark.pw-project #view-pw .pw-intro .pw-section-top {
+  color: var(--ink) !important;
+  border-color: var(--rule) !important;
+}
+body.dark.pw-project #view-pw .pw-opening-index,
+body.dark.pw-project #view-pw .pw-kicker,
+body.dark.pw-project #view-pw .pw-intro h2 em {
+  color: #006633 !important;
+}
+/* Text inside the intentionally light architectural/product cards remains dark. */
+body.dark.pw-project #view-pw .pw-plan-demo,
+body.dark.pw-project #view-pw .pw-plan-display,
+body.dark.pw-project #view-pw .pw-insta-frame,
+body.dark.pw-project #view-pw .pw-web-player {
+  color: #000000 !important;
+}
+</style>
+</head><body class="home-page">
 <div id="view-home">
 <header class="topnav studio-topnav">
 <a aria-label="cb.graphicdesign - Home" class="identity studio-mark" href="index.html">cb<span>.</span>graphicdesign</a>
@@ -2333,7 +2434,7 @@ body.dark #view-home .studio-hero-top .studio-hero-side{color:#ada5a1!important}
 <div hidden="" id="view-j2">
 <header class="topnav studio-topnav page-topnav">
 <a class="identity studio-mark" href="index.html">cb<span>.</span>graphicdesign</a>
-<div class="navtools"><button aria-label="Idioma" class="lang-switch">ES / EN</button><span class="tiny-divider">·</span><button aria-label="Modo claro / oscuro" class="theme-switch">◐</button></div>
+<div class="navtools"><button aria-label="Idioma" class="lang-switch">ES / EN</button><span class="tiny-divider">/</span><button aria-label="Modo claro / oscuro" class="theme-switch">◐</button></div>
 <nav aria-label="Primary navigation" class="studio-links">
 <a class="is-active" data-en="Work" data-es="Proyectos" data-section="work" href="index.html#works">Proyectos</a>
 <a data-en="About" data-es="Sobre mí" data-section="about" href="index.html#about">Sobre mí</a>
@@ -2405,7 +2506,7 @@ body.dark #view-home .studio-hero-top .studio-hero-side{color:#ada5a1!important}
 </div>
 <div hidden="" id="view-pw">
 <header class="topnav studio-topnav page-topnav"><a class="identity studio-mark" href="index.html">cb<span>.</span>graphicdesign</a>
-<div class="navtools"><button aria-label="Idioma" class="lang-switch">ES / EN</button><span class="tiny-divider">·</span><button aria-label="Modo claro / oscuro" class="theme-switch">◐</button></div>
+<div class="navtools"><button aria-label="Idioma" class="lang-switch">ES / EN</button><span class="tiny-divider">/</span><button aria-label="Modo claro / oscuro" class="theme-switch">◐</button></div>
 <nav aria-label="Primary navigation" class="studio-links">
 <a class="is-active" data-en="Work" data-es="Proyectos" data-section="work" href="index.html#works">Proyectos</a>
 <a data-en="About" data-es="Sobre mí" data-section="about" href="index.html#about">Sobre mí</a>
@@ -2484,7 +2585,7 @@ body.dark #view-home .studio-hero-top .studio-hero-side{color:#ada5a1!important}
 
 <span class="pw-slide-count mono" id="pw-slide-count">01 / 10</span>
 </div>
-<div class="pw-insta-bottom"><span>♡   ◯   ↗</span><button aria-pressed="true" data-en="Ⅱ AUTO · 2 S" data-es="Ⅱ AUTO · 2 S" id="pw-autoplay" type="button">Ⅱ AUTO · 2 S</button></div>
+<div class="pw-insta-bottom"><span>♡   ◯   ↗</span></div>
 <div aria-label="Elegir publicación" class="pw-insta-dots" id="pw-insta-dots"></div>
 <p class="pw-insta-caption"><strong>rocchio.propiedades</strong> <span data-en="Portal Witcomb. Five units. Five arches. Five experiences." data-es="Portal Witcomb. Cinco locales. Cinco arcos. Cinco experiencias.">Portal Witcomb. Cinco locales. Cinco arcos. Cinco experiencias.</span></p>
 </div>
@@ -2532,7 +2633,7 @@ body.dark #view-home .studio-hero-top .studio-hero-side{color:#ada5a1!important}
 <div hidden="" id="view-ba">
 <header class="topnav studio-topnav page-topnav">
 <a class="identity studio-mark" href="index.html">cb<span>.</span>graphicdesign</a>
-<div class="navtools"><button aria-label="Cambiar idioma" class="lang-switch">ES / EN</button><span class="tiny-divider">·</span><button aria-label="Cambiar modo claro u oscuro" class="theme-switch">◐</button></div>
+<div class="navtools"><button aria-label="Cambiar idioma" class="lang-switch">ES / EN</button><span class="tiny-divider">/</span><button aria-label="Cambiar modo claro u oscuro" class="theme-switch">◐</button></div>
 <nav aria-label="Primary navigation" class="studio-links">
 <a class="is-active" data-en="Work" data-es="Proyectos" data-section="work" href="index.html#works">Proyectos</a>
 <a data-en="About" data-es="Sobre mí" data-section="about" href="index.html#about">Sobre mí</a>
@@ -2599,7 +2700,7 @@ body.dark #view-home .studio-hero-top .studio-hero-side{color:#ada5a1!important}
 <div hidden="" id="view-sens">
 <header class="topnav studio-topnav page-topnav">
 <a class="identity studio-mark" href="index.html">cb<span>.</span>graphicdesign</a>
-<div class="navtools"><button aria-label="Cambiar idioma" class="lang-switch">ES / EN</button><span class="tiny-divider">·</span><button aria-label="Cambiar modo claro u oscuro" class="theme-switch">◐</button></div>
+<div class="navtools"><button aria-label="Cambiar idioma" class="lang-switch">ES / EN</button><span class="tiny-divider">/</span><button aria-label="Cambiar modo claro u oscuro" class="theme-switch">◐</button></div>
 <nav aria-label="Primary navigation" class="studio-links">
 <a class="is-active" data-en="Work" data-es="Proyectos" data-section="work" href="index.html#works">Proyectos</a>
 <a data-en="About" data-es="Sobre mí" data-section="about" href="index.html#about">Sobre mí</a>
@@ -2643,7 +2744,7 @@ body.dark #view-home .studio-hero-top .studio-hero-side{color:#ada5a1!important}
 <div hidden="" id="view-book">
 <header class="topnav studio-topnav page-topnav">
 <a class="identity studio-mark" href="index.html">cb<span>.</span>graphicdesign</a>
-<div class="navtools"><button aria-label="Cambiar idioma" class="lang-switch">ES / EN</button><span class="tiny-divider">·</span><button aria-label="Cambiar modo claro u oscuro" class="theme-switch">◐</button></div>
+<div class="navtools"><button aria-label="Cambiar idioma" class="lang-switch">ES / EN</button><span class="tiny-divider">/</span><button aria-label="Cambiar modo claro u oscuro" class="theme-switch">◐</button></div>
 <nav aria-label="Primary navigation" class="studio-links">
 <a class="is-active" data-en="Work" data-es="Proyectos" data-section="work" href="index.html#works">Proyectos</a>
 <a data-en="About" data-es="Sobre mí" data-section="about" href="index.html#about">Sobre mí</a>
@@ -2857,7 +2958,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')dialog.hidden=true})
   const count=document.getElementById('pw-slide-count');
   const prev=document.getElementById('pw-prev');
   const next=document.getElementById('pw-next');
-  const autoplayButton=document.getElementById('pw-autoplay');
   const frame=document.getElementById('pw-insta-frame');
   let current=0,auto=true,timer=null,startX=null;
 
@@ -2894,15 +2994,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')dialog.hidden=true})
     }
     prev.addEventListener('click',()=>go(current-1,true));
     next.addEventListener('click',()=>go(current+1,true));
-    autoplayButton.addEventListener('click',()=>{
-      auto=!auto;
-      autoplayButton.setAttribute('aria-pressed', String(auto));
-      autoplayButton.textContent=auto ? 'Ⅱ AUTO · 2 S' : (document.documentElement.lang==='es'?'▶ AUTO · DESACTIVADO':'▶ AUTO · OFF');
-      arm();
-    });
-    document.addEventListener('cami:languagechange',()=>{
-      autoplayButton.textContent=auto?'Ⅱ AUTO · 2 S':(document.documentElement.lang==='es'?'▶ AUTO · DESACTIVADO':'▶ AUTO · OFF');
-    });
     frame.addEventListener('mouseenter', clear);
     frame.addEventListener('mouseleave', arm);
     frame.addEventListener('focusin', clear);
